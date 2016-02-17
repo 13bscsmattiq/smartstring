@@ -1,0 +1,52 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main(){
+	int menuInput;
+	vector<string> vec;
+	vector<string> mylist = {"A", "B", "C", "D"};
+	cout<<"Choose 1 to find the length, 2 to find append the character, 3 to find character at particular index"<<'\n';
+	cin>>menuInput;
+	if(menuInput==1){
+		mylength(mylist);
+	}
+	if(menuInput==2){
+		vec=  Append(mylist);
+
+	}
+	if(menuInput==3){
+	    ReturnCharacter(mylist);
+	
+	}
+	else{
+		break;
+	}
+	
+	}
+
+
+
+}
+
+
+vector<string> Append(mylist) {
+	string input;
+	cout<<"Enter a character to append"<<'\n';
+	std::cin>>input;
+	mylist.push_back(input); 
+}
+
+int mylength(mylist){
+	return mylist.size();
+}
+
+string ReturnCharacter(mylist){
+	int i;
+	cout<<"Enter the index:"<<'\n';
+	cin<<i;
+	return mylist[i];
+
+}
+
